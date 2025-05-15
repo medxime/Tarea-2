@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    float monto, descuento, total;
+
+    
+    printf("Ingrese el monto de su compra: $");
+    scanf("%f", &monto);
+
+    
+    if (monto > 2500) {
+      
+        descuento = monto * 0.08;
+      
+        total = monto - descuento;
+        printf("\n¡Felicidades! Se ha aplicado un descuento del 8%%.\n");
+        printf("Monto del descuento: $%.2f\n", descuento);
+        printf("Total a pagar: $%.2f\n", total);
+    } else {
+      
+        total = monto;
+        printf("\nNo se aplica descuento.\n");
+        printf("Total a pagar: $%.2f\n", total);
+    }
+
+    return 0;
+}
